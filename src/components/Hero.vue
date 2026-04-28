@@ -65,13 +65,13 @@ import SocialRail from './SocialRail.vue'
 import { ref } from 'vue'
 
 defineProps({
-  ctaHref: { type: String, default: '/assets/Szymon Czech Fullstack Developer CV.pdf' },
+  ctaHref: { type: String, default: '@/assets/Szymon Czech Fullstack Developer CV.pdf' },
   ctaDownload: { type: Boolean, default: true },
-  portraitSrc: { type: String, default: '/assets/profile_me.jpg' },
   portraitAlt: { type: String, default: 'Portrait' },
 })
 
 const isMobileMenuOpen = ref(false)
+import portraitSrc from '@/assets/profile_me.jpg'
 </script>
 
 <style scoped>
