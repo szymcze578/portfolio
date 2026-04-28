@@ -1,0 +1,14 @@
+:root {
+  --bg: #ffffff;
+  --ink: #0b1a33;
+  --ink-soft: #38486a;
+  --muted: #7a8aa6;
+  --line: #e3eaf5;
+  --accent: #2563eb;
+  --accent-ink: #1d4ed8;
+  --accent-soft: #e6efff;
+}
+
+@theme inline {
+  --font-family-sans: 'JetBrains Mono', monospace;
+}
