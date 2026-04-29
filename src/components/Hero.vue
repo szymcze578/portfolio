@@ -1,14 +1,11 @@
 <template>
-  <section
-    id="home"
-    class="relative overflow-hidden pt-9 pb-15 sm:pt-17.5 sm:pb-27.5 min-h-screen items-center flex"
-  >
+  <section id="home" class="relative overflow-hidden min-h-screen items-center flex">
     <div
       class="mx-auto max-w-370 px-4.5 xs:px-[22px] sm:px-8 lg:px-14 grid items-center gap-6 grid-cols-1 sm:grid-cols-[48px_1fr] sm:gap-8 md:grid-cols-[64px_1fr_1fr] md:gap-12"
     >
       <SocialRail />
 
-      <div class="hero-copy">
+      <div class="flex flex-col">
         <div
           class="inline-flex items-center gap-2.5 mb-7 text-[12px] uppercase tracking-[0.14em] text-(--muted) font-(--font)"
         >
@@ -34,7 +31,7 @@
         <a
           :href="ctaHref"
           download="Szymon Czech Fullstack Developer CV.pdf"
-          class="inline-flex items-center gap-2.5 mt-7 px-5.5 py-3.5 rounded-xl text-[15px] font-medium bg-(--ink) text-(--bg) no-underline cursor-pointer transition-[transform,background-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:bg-(--accent-ink) shadow-[0_1px_0_rgba(0,0,0,0.05),0_6px_18px_-6px_rgba(26,23,20,0.4)]"
+          class="inline-flex items-center w-fit gap-2.5 mt-7 px-5.5 py-3.5 rounded-xl text-[15px] font-medium bg-(--ink) text-(--bg) no-underline cursor-pointer transition-[transform,background-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:bg-(--accent-ink) shadow-[0_1px_0_rgba(0,0,0,0.05),0_6px_18px_-6px_rgba(26,23,20,0.4)]"
         >
           Download CV
           <DownloadIcon />

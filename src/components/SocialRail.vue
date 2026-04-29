@@ -1,8 +1,5 @@
 <template>
-  <aside
-    class="flex flex-row sm:flex-col items-center gap-2 sm:gap-5.5 text-(--muted)"
-    aria-label="Social"
-  >
+  <aside class="flex sm:flex-col items-center gap-2 sm:gap-5.5 text-(--muted)">
     <a
       v-for="s in socials"
       :key="s.kind"
