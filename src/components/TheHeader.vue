@@ -82,9 +82,9 @@ const scrollOffset = ref(80)
 const navigation: NavLink[] = [
   { id: 'home', href: '#home', label: 'Home' },
   { id: 'about', href: '#about', label: 'About me' },
-  { id: 'skills', href: '#skills', label: 'Skills' },
   { id: 'experience', href: '#experience', label: 'Experience' },
   { id: 'education', href: '#education', label: 'Education' },
+  { id: 'skills', href: '#skills', label: 'Skills' },
 ]
 
 const isScrolled = ref(false)

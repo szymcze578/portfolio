@@ -1,5 +1,6 @@
 :root {
   --bg: #ffffff;
+  --bg-variant: #f4f7fc;
   --ink: #0b1a33;
   --ink-soft: #38486a;
   --muted: #7a8aa6;
@@ -8,6 +9,10 @@
   --accent-ink: #1d4ed8;
   --accent-soft: #e6efff;
   --accent-rgb: 37 99 235;
+
+  --dark-ink: #f4eee5;
+  --dark-soft: #b8b3aa;
+  --dark-border: rgb(255 255 255 / 0.1);
 }
 
 @theme inline {

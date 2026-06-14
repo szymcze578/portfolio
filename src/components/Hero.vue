@@ -29,7 +29,7 @@
         </p>
 
         <a
-          :href="ctaHref"
+          :href="curriculVitae"
           download="Szymon Czech Fullstack Developer CV.pdf"
           class="inline-flex items-center w-fit gap-2.5 mt-7 px-5.5 py-3.5 rounded-xl text-[15px] font-medium bg-(--ink) text-(--bg) no-underline cursor-pointer transition-[transform,background-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:bg-(--accent-ink) shadow-[0_1px_0_rgba(0,0,0,0.05),0_6px_18px_-6px_rgba(26,23,20,0.4)]"
         >
@@ -59,16 +59,14 @@
 <script setup>
 import DownloadIcon from './icons/DownloadIcon.vue'
 import SocialRail from './SocialRail.vue'
-import { ref } from 'vue'
+
+import curriculVitae from '@/assets/Szymon Czech Fullstack Developer CV.pdf'
+import portraitSrc from '@/assets/profile_me.jpg'
 
 defineProps({
-  ctaHref: { type: String, default: '@/assets/Szymon Czech Fullstack Developer CV.pdf' },
   ctaDownload: { type: Boolean, default: true },
   portraitAlt: { type: String, default: 'Portrait' },
 })
-
-const isMobileMenuOpen = ref(false)
-import portraitSrc from '@/assets/profile_me.jpg'
 </script>
 
 <style scoped>

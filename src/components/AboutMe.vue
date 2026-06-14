@@ -42,15 +42,12 @@
   </section>
 </template>
 
-<style>
+<style scoped>
 /* ---------- About (full-bleed dark section) ---------- */
 .about {
-  --about-ink: #f4eee5;
-  --about-soft: #b8b3aa;
-  --about-line: rgba(255, 255, 255, 0.1);
   padding: 110px 0;
   background: #14181f;
-  color: var(--about-ink);
+  color: var(--dark-ink);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   position: relative;
@@ -87,7 +84,7 @@
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--about-soft);
+  color: var(--dark-soft);
   margin: 0 0 18px;
 }
 .about-head h2 {
@@ -96,7 +93,7 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin: 0;
-  color: var(--about-ink);
+  color: var(--dark-ink);
 }
 .about-head h2 i {
   color: var(--accent);
@@ -106,7 +103,7 @@
 .about-body p {
   font-size: 17px;
   line-height: 1.7;
-  color: var(--about-soft);
+  color: var(--dark-soft);
   margin: 0 0 18px;
 }
 .about-body p:last-child {
@@ -117,7 +114,7 @@
 .about-stats {
   margin-top: 64px;
   padding-top: 40px;
-  border-top: 1px solid var(--about-line);
+  border-top: 1px solid var(--dark-border);
   display: flex;
   justify-content: center;
   gap: 18px;
@@ -125,7 +122,7 @@
 }
 .about-stat {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--about-line);
+  border: 1px solid var(--dark-border);
   border-radius: var(--radius);
   padding: 22px 32px;
   display: flex;
@@ -154,7 +151,7 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--about-soft);
+  color: var(--dark-soft);
   font-weight: 500;
 }
 </style>
