@@ -18,7 +18,8 @@
           <h2
             class="m-0 max-w-180 text-[clamp(36px,4.4vw,56px)] font-[380] leading-[1.05] tracking-[-0.02em]"
           >
-            {{ model.heading }} <i class="font-normal not-italic text-(--accent)">{{ model.headingAccent }}</i>
+            {{ model.heading }}
+            <i class="font-normal not-italic text-(--accent)">{{ model.headingAccent }}</i>
           </h2>
         </div>
         <p class="text-right text-xs leading-[1.7] text-(--dark-soft) max-[720px]:text-left">
@@ -89,15 +90,12 @@
 
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue'
-import type { EducationModel } from './types/PropsModels'
+import type { EducationModel } from './education'
 
 const { model } = defineProps<{ model: EducationModel }>()
 
-/* Tracks logos that failed to load so the monogram fallback can take over. */
 const failedLogos = reactive(new Set<string>())
 
-/* Scroll-reveal — progressively enhanced. Anything already on screen reveals
-   immediately; the observer only handles elements scrolled into view later. */
 const root = ref<HTMLElement | null>(null)
 
 onMounted(() => {
@@ -126,7 +124,6 @@ onMounted(() => {
     { threshold: 0.12 },
   )
 
-  // Reveal what's on screen now; defer the rest to the observer.
   targets.forEach((el) => (inView(el) ? reveal(el) : io.observe(el)))
 })
 </script>
@@ -184,38 +181,10 @@ onMounted(() => {
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 0 rgb(var(--accent-rgb) / 0.55);
-  animation: edu-pulse 1.8s infinite;
+  animation: accent-pulse 1.8s infinite;
 }
 .edu-badge--static::before {
   animation: none;
   box-shadow: none;
-}
-@keyframes edu-pulse {
-  70% {
-    box-shadow: 0 0 0 10px rgb(var(--accent-rgb) / 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgb(var(--accent-rgb) / 0);
-  }
-}
-
-/* Scroll-reveal. */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 700ms ease,
-    transform 700ms ease;
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
 }
 </style>

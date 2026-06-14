@@ -1,6 +1,16 @@
-import type { ExperienceModel } from '@/components/types/PropsModels'
 import netcompanyLogo from '@/assets/netcompany.png'
 import regalisLogo from '@/assets/regalis.png'
+import type { ExperienceEntry } from './ExperienceEntry'
+
+export interface ExperienceModel {
+  sectionId?: string
+  sectionLabel?: string
+  headlineLead?: string
+  headlineAccent?: string
+  headlineTrail?: string
+  meta?: string
+  entries?: readonly ExperienceEntry[]
+}
 
 export const experience: ExperienceModel = {
   sectionId: 'experience',

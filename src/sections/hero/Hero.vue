@@ -3,7 +3,7 @@
     <div
       class="mx-auto max-w-370 px-4.5 xs:px-[22px] sm:px-8 lg:px-14 grid items-center gap-6 grid-cols-1 sm:grid-cols-[48px_1fr] sm:gap-8 md:grid-cols-[64px_1fr_1fr] md:gap-12"
     >
-      <SocialRail />
+      <SocialRail :model="socials" />
 
       <div class="flex flex-col">
         <div
@@ -37,8 +37,6 @@
           <DownloadIcon />
         </a>
       </div>
-
-      <!-- Portrait -->
       <div
         class="portrait relative w-full max-w-125 md:max-w-125 mx-auto md:ml-auto md:mr-0 mt-6 md:mt-0 sm:col-span-2 md:col-auto"
         style="aspect-ratio: 1 / 1.05"
@@ -57,8 +55,9 @@
 </template>
 
 <script setup>
-import DownloadIcon from './icons/DownloadIcon.vue'
+import DownloadIcon from '@/components/icons/DownloadIcon.vue'
 import SocialRail from './SocialRail.vue'
+import { socials } from './socials'
 
 import curriculVitae from '@/assets/Szymon Czech Fullstack Developer CV.pdf'
 import portraitSrc from '@/assets/profile_me.jpg'
@@ -73,15 +72,7 @@ defineProps({
 /* Pulse dot */
 .hero-pulse {
   box-shadow: 0 0 0 0 rgb(var(--accent-rgb) / 0.55);
-  animation: heroPulse 1.8s infinite;
-}
-@keyframes heroPulse {
-  70% {
-    box-shadow: 0 0 0 10px rgb(var(--accent-rgb) / 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgb(var(--accent-rgb) / 0);
-  }
+  animation: accent-pulse 1.8s infinite;
 }
 
 /* Accent underline highlight */

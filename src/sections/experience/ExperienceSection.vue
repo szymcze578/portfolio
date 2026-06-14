@@ -1,7 +1,6 @@
 <template>
   <section :id="model.sectionId" class="py-18 sm:py-27.5">
     <div class="mx-auto max-w-370 px-5.5 sm:px-8 lg:px-14">
-      <!-- Section header -->
       <header class="grid items-end gap-8 mb-14 grid-cols-1 sm:grid-cols-[1fr_auto]">
         <div>
           <p
@@ -33,7 +32,7 @@
 
 <script setup lang="ts">
 import ExperienceRow from './ExperienceRow.vue'
-import type { ExperienceModel } from './types/PropsModels.ts'
+import type { ExperienceModel } from './experience'
 
 const { model } = defineProps<{ model: ExperienceModel }>()
 </script>

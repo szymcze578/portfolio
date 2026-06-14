@@ -1,4 +1,17 @@
-import type { TechnologiesModel } from '@/components/types/PropsModels'
+import type { Technology } from './Technology'
+import VueIcon from '@/components/icons/VueIcon.vue'
+import JavaIcon from '@/components/icons/JavaIcon.vue'
+
+export interface TechnologiesModel {
+  sectionId?: string
+  sectionLabel?: string
+  headlineLead?: string
+  headlineAccent?: string
+  headlineTrail?: string
+  meta?: string
+  technologies?: Technology[]
+  alsoFluentWith?: string[]
+}
 
 export const technologies: TechnologiesModel = {
   sectionId: 'skills',
@@ -10,6 +23,7 @@ export const technologies: TechnologiesModel = {
   technologies: [
     {
       id: 'vue',
+      icon: VueIcon,
       index: 'Frontend',
       role: 'Frontend framework',
       name: 'Vue.js',
@@ -19,13 +33,16 @@ export const technologies: TechnologiesModel = {
         'complex UI flows easy to reason about.',
       stack: ['Vue 3', 'Nuxt', 'Pinia', 'Vite', 'TypeScript'],
       projects: [
-        { label: 'Project One', href: '#work', meta: 'Coming soon' },
-        { label: 'Project Two', href: '#work', meta: 'Coming soon' },
-        { label: 'Project Three', href: '#work', meta: 'Coming soon' },
+        {
+          label: 'Geodimetr Website',
+          href: 'https://github.com/szymcze578/New-Frontend-Vue.js---page-for-Surveyor-company',
+          meta: 'Deployed',
+        },
       ],
     },
     {
       id: 'java',
+      icon: JavaIcon,
       index: 'Backend',
       role: 'Backend platform',
       name: 'Java',
@@ -35,9 +52,16 @@ export const technologies: TechnologiesModel = {
         'models and keeping infrastructure boring — in the best way.',
       stack: ['Java 21', 'Spring Boot', 'JPA', 'PostgreSQL', 'Kafka'],
       projects: [
-        { label: 'API Service', href: '#work', meta: 'Coming soon' },
-        { label: 'Microservice', href: '#work', meta: 'Coming soon' },
-        { label: 'Data Pipeline', href: '#work', meta: 'Coming soon' },
+        {
+          label: 'Sales Handling App',
+          href: 'https://github.com/szymcze578/SalesHandlingApp-MobileApplication-EngineeringThesis',
+          meta: 'Enginnering Thesis',
+        },
+        {
+          label: 'Library Microservices',
+          href: 'https://github.com/szymcze578/library-app-microservice',
+          meta: 'In Progress',
+        },
       ],
     },
   ],

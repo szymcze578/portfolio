@@ -1,6 +1,15 @@
-import type { EducationModel } from '@/components/types/PropsModels'
 import uekLogo from '@/assets/uek.png'
 import plslLogo from '@/assets/plsl.png'
+import type { EducationItem } from './EducationItem'
+
+export interface EducationModel {
+  sectionId?: string
+  label?: string
+  heading?: string
+  headingAccent?: string
+  meta?: string
+  items?: readonly EducationItem[]
+}
 
 export const education: EducationModel = {
   sectionId: 'education',

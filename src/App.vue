@@ -10,13 +10,13 @@
 
 <script setup lang="ts">
 import AboutMe from './components/AboutMe.vue'
-import Education from './components/Education.vue'
-import ExperienceSection from './components/ExperienceSection.vue'
 import Footer from './components/Footer.vue'
-import Hero from './components/Hero.vue'
-import TechnologiesSection from './components/TechnologiesSection.vue'
 import TheHeader from './components/TheHeader.vue'
-import { education } from '@/data/education'
-import { experience } from '@/data/experience'
-import { technologies } from '@/data/technologies'
+import Hero from './sections/hero/Hero.vue'
+import Education from './sections/education/Education.vue'
+import ExperienceSection from './sections/experience/ExperienceSection.vue'
+import TechnologiesSection from './sections/technologies/TechnologiesSection.vue'
+import { education } from './sections/education/education'
+import { experience } from './sections/experience/experience'
+import { technologies } from './sections/technologies/technologies'
 </script>

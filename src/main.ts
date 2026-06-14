@@ -5,7 +5,7 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
-import Hero from './components/Hero.vue'
+import Hero from './sections/hero/Hero.vue'
 import TheHeader from './components/TheHeader.vue'
 
 const app = createApp(App)

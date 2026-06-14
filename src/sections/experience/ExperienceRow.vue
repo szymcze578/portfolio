@@ -3,7 +3,6 @@
     class="exp-row group relative grid items-start gap-8 py-9 grid-cols-[16px_1fr] sm:grid-cols-[220px_32px_1fr] sm:gap-8"
     :data-current="entry.isCurrent ? 'true' : null"
   >
-    <!-- When (date / duration / current badge) -->
     <div
       class="order-2 sm:order-1 sm:pt-1 flex flex-row sm:flex-col flex-wrap items-center sm:items-start gap-2.5 sm:gap-1.5 col-start-2 sm:col-start-1"
     >
@@ -23,7 +22,6 @@
       </span>
     </div>
 
-    <!-- Timeline marker -->
     <div
       class="order-1 sm:order-2 row-span-2 sm:row-span-1 flex justify-center pt-1.5 relative z-1 col-start-1 sm:col-start-2"
     >
@@ -31,8 +29,6 @@
         class="exp-dot block w-3.5 h-3.5 rounded-full bg-(--bg) border-2 border-(--line) transition-[border-color,transform,background-color] duration-200 group-hover:border-(--accent) group-hover:scale-110"
       />
     </div>
-
-    <!-- Body -->
     <div class="order-3 min-w-0 col-start-2 sm:col-start-3">
       <p class="text-[11.5px] font-medium uppercase tracking-[0.14em] text-(--accent-ink) m-0 mb-1">
         {{ entry.role }}
@@ -53,7 +49,6 @@
           {{ entry.company }}
         </h3>
       </div>
-
       <p class="m-0 mb-4 max-w-[60ch] text-[16px] leading-[1.65] text-(--ink-soft)">
         {{ entry.description }}
       </p>
@@ -62,7 +57,7 @@
         <li
           v-for="highlight in entry.highlights"
           :key="highlight"
-          class="relative pl-5.5 text-[14.5px] leading-[1.55] text-(--ink-soft) before:content-[''] before:absolute before:left-1 before:top-[0.7em] before:w-2 before:h-0.5 before:rounded-[1px] before:bg-[var(--accent)]"
+          class="relative pl-5.5 text-[14.5px] leading-[1.55] text-(--ink-soft) before:content-[''] before:absolute before:left-1 before:top-[0.7em] before:w-2 before:h-0.5 before:rounded-[1px] before:bg-(--accent)"
         >
           {{ highlight }}
         </li>
@@ -83,7 +78,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { ExperienceEntry } from './types/ExperienceEntry'
+import type { ExperienceEntry } from './ExperienceEntry'
 
 interface Props {
   entry: ExperienceEntry
@@ -121,10 +116,6 @@ const logoAltText = computed<string>(() => props.entry.logoAlt ?? `${props.entry
   border-color: var(--accent);
 }
 
-/*
- * Pulsing dot on the "Current role" badge — uses the page's --accent-rgb
- * channel so it follows the active palette.
- */
 .exp-current::before {
   content: '';
   display: inline-block;
@@ -133,15 +124,6 @@ const logoAltText = computed<string>(() => props.entry.logoAlt ?? `${props.entry
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 0 rgb(var(--accent-rgb) / 0.55);
-  animation: exp-pulse 1.8s infinite;
-}
-
-@keyframes exp-pulse {
-  70% {
-    box-shadow: 0 0 0 10px rgb(var(--accent-rgb) / 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgb(var(--accent-rgb) / 0);
-  }
+  animation: accent-pulse 1.8s infinite;
 }
 </style>

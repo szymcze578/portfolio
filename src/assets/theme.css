@@ -18,3 +18,31 @@
 @theme inline {
   --font-family-sans: 'JetBrains Mono', monospace;
 }
+
+@keyframes accent-pulse {
+  70% {
+    box-shadow: 0 0 0 10px rgb(var(--accent-rgb) / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(var(--accent-rgb) / 0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
