@@ -1,4 +1,6 @@
 import type { EducationModel } from '@/components/types/PropsModels'
+import uekLogo from '@/assets/uek.png'
+import plslLogo from '@/assets/plsl.png'
 
 export const education: EducationModel = {
   sectionId: 'education',
@@ -16,7 +18,7 @@ export const education: EducationModel = {
       field: 'Applied Computer Science',
       titleMain: 'Master',
       titleNative: '(Magister)',
-      logo: 'src/assets/uek.png',
+      logo: uekLogo,
       abbr: 'UEK',
     },
     {
@@ -28,7 +30,7 @@ export const education: EducationModel = {
       field: 'Informatics — computer graphics and software',
       titleMain: 'Bachelor of Engineering',
       titleNative: '(Inżynier)',
-      logo: 'src/assets/plsl.png',
+      logo: plslLogo,
       abbr: 'PŚ',
     },
   ],

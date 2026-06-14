@@ -1,4 +1,6 @@
 import type { ExperienceModel } from '@/components/types/PropsModels'
+import netcompanyLogo from '@/assets/netcompany.png'
+import regalisLogo from '@/assets/regalis.png'
 
 export const experience: ExperienceModel = {
   sectionId: 'experience',
@@ -12,7 +14,7 @@ export const experience: ExperienceModel = {
       id: 'netcompany',
       role: 'Consultant',
       company: 'Netcompany',
-      logo: 'src/assets/netcompany.png',
+      logo: netcompanyLogo,
       dateRange: '07.2024 — Present',
       duration: 'Full-time',
       isCurrent: true,
@@ -41,7 +43,7 @@ export const experience: ExperienceModel = {
       id: 'regalis',
       role: 'System Administrator - Intern',
       company: 'Regalis Technologies',
-      logo: 'src/assets/regalis.png',
+      logo: regalisLogo,
       dateRange: '07.2023',
       duration: '1 month · Internship',
       description:
